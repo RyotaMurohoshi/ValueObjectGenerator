@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueObjectGenerator", "ValueObjectGenerator\ValueObjectGenerator.csproj", "{AAD00A7F-3BBE-46CA-BD4C-27E186A0AA6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAD00A7F-3BBE-46CA-BD4C-27E186A0AA6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD00A7F-3BBE-46CA-BD4C-27E186A0AA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD00A7F-3BBE-46CA-BD4C-27E186A0AA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD00A7F-3BBE-46CA-BD4C-27E186A0AA6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
