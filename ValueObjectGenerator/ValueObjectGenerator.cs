@@ -215,7 +215,7 @@ namespace ValueObjectGenerator
             var source = new StringBuilder($@"
 namespace {namespaceName}
 {{
-    public partial class {classSymbol.Name} : System.IEquatable<{classSymbol.Name}>
+    public sealed partial class {classSymbol.Name} : System.IEquatable<{classSymbol.Name}>
     {{
         public {valueType} {propertyName} {{ get; }}
         public {classSymbol.Name}({valueType} value)

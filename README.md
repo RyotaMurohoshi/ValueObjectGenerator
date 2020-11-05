@@ -87,7 +87,7 @@ To avoid this mistake, we should create `ProductId` class and `CategoryId` class
 With these classes, compiler can detect wrong usage of `ProductId` property and `ProductCategoryId` property.
 
 ```csharp
-public class ProductId: IEquatable<ProductId>
+public sealed class ProductId: IEquatable<ProductId>
 {
     public int Value { get; }
 
