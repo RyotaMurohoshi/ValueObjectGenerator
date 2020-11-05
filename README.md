@@ -188,8 +188,10 @@ public class Product
 
 ## Plans
 
+* IComparable support.
 * JSON serializer/deserializer.
 * other value types.
+* arithmetic operators support.
 
 ## Author
 
