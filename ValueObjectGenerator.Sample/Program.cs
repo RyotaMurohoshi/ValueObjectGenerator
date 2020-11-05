@@ -38,6 +38,12 @@ namespace ValueObjectGeneratorSample
     {
     }
 
+
+    [StringValueObject]
+    public partial struct StructStringValueObject
+    {
+    }
+
     public static class Program
     {
         public static void SampleStringValueObject()
@@ -174,6 +180,33 @@ namespace ValueObjectGeneratorSample
 
             var fieldName = new CustomizedPropertyName("CustomizedPropertyName");
             Console.WriteLine($"fieldName.StringValue : {fieldName.StringValue}");
+            Console.WriteLine();
+        }
+
+        public static void SampleStructStringValueObject()
+        {
+            Console.WriteLine("---StructStringValueObject Sample---");
+            var structStringValueObject = new StructStringValueObject("Ryota");
+            var otherStructStringValueObject = structStringValueObject;
+
+            Console.WriteLine("var structStringValueObject = new StructStringValueObject(\"Ryota\")");
+            Console.WriteLine("var otherStructStringValueObject = structStringValueObject;");
+            Console.WriteLine();
+            Console.WriteLine($"structStringValueObject: {structStringValueObject}");
+            Console.WriteLine($"structStringValueObject.Value: {structStringValueObject.Value}");
+            Console.WriteLine();
+            Console.WriteLine($"structStringValueObject == otherStructStringValueObject: {structStringValueObject == otherStructStringValueObject}");
+            Console.WriteLine($"structStringValueObject.Equals(otherStructStringValueObject): {structStringValueObject.Equals(otherStructStringValueObject)}");
+            Console.WriteLine($"structStringValueObject == new StructStringValueObject(\"Ryota\"): {structStringValueObject == new StructStringValueObject("Ryota")}");
+            Console.WriteLine($"structStringValueObject.Equals(new StructStringValueObject(\"Ryota\")): {structStringValueObject.Equals(new StructStringValueObject("Ryota"))}");
+            Console.WriteLine();
+            Console.WriteLine($"structStringValueObject == new StructStringValueObject(\"Taro\"): {structStringValueObject == new StructStringValueObject("Taro")}");
+            Console.WriteLine($"structStringValueObject.Equals(new StructStringValueObject(\"Taro\"): {structStringValueObject.Equals(new StructStringValueObject("Taro"))}");
+            Console.WriteLine($"structStringValueObject.Equals(null): {structStringValueObject.Equals(null)}");
+            Console.WriteLine($"structStringValueObject.Equals(\"\"): {structStringValueObject.Equals("")}");
+            Console.WriteLine();
+            Console.WriteLine($"ReferenceEquals(structStringValueObject, otherStructStringValueObject): {ReferenceEquals(structStringValueObject, otherStructStringValueObject)}");
+            Console.WriteLine();
         }
 
         public static void Main(string[] args)
@@ -184,6 +217,7 @@ namespace ValueObjectGeneratorSample
             SampleFloatValueObject();
             SampleDoubleValueObject();
             SampleCustomizedPropertyName();
+            SampleStructStringValueObject();
         }
     }
 }

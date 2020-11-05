@@ -189,7 +189,6 @@ public class Product
 ## Plans
 
 * JSON serializer/deserializer.
-* struct support.
 * other value types.
 
 ## Author
