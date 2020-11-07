@@ -136,7 +136,7 @@ namespace ValueObjectGenerator
     }
 
     [Generator]
-    public class DoubleFloat : ISourceGenerator
+    public class DoubleValueObjectAttribute : ISourceGenerator
     {
         private const string attributeText = @"
 using System;
