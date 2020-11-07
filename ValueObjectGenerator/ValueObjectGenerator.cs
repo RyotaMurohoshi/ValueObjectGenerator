@@ -230,8 +230,8 @@ namespace {namespaceName}
         public static bool operator !=({typeSymbol.Name} left, {typeSymbol.Name} right) => !Equals(left, right);
         public bool Equals({typeSymbol.Name} other)
         {{
-            if (ReferenceEquals(null, other)) return false;
-            if (ReferenceEquals(this, other)) return true;
+            {(isStruct ? "" : "if (ReferenceEquals(null, other)) return false;")}
+            {(isStruct ? "" : "if (ReferenceEquals(this, other)) return true;")}
             return {propertyName} == other.{propertyName};
         }}
         public static explicit operator {typeSymbol.Name}({valueType} value) => new {typeSymbol.Name}(value);
